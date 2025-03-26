@@ -8,33 +8,59 @@ interface Particle {
     x: number;
     y: number;
     size: number;
-    speedX: number;
-    speedY: number;
+    speed: number;
+    opacity: number;
 }
 
 const AnimatedTitle = () => {
     const [particles, setParticles] = useState<Particle[]>([]);
+    const [showText, setShowText] = useState(false);
 
     useEffect(() => {
         // Create initial particles
-        const initialParticles = Array.from({ length: 50 }, (_, i) => ({
+        const initialParticles = Array.from({ length: 200 }, (_, i) => ({
             id: i,
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-            size: Math.random() * 3 + 1,
-            speedX: (Math.random() - 0.5) * 2,
-            speedY: (Math.random() - 0.5) * 2,
+            x: -50, // Start off-screen
+            y: Math.random() * 200, // Random vertical position
+            size: Math.random() * 2 + 1,
+            speed: Math.random() * 2 + 1,
+            opacity: 0,
         }));
         setParticles(initialParticles);
 
-        // Animation loop
+        // Start text animation after particles have moved
+        setTimeout(() => {
+            setShowText(true);
+        }, 1500);
+    }, []);
+
+    useEffect(() => {
         const animate = () => {
             setParticles(prevParticles =>
-                prevParticles.map(particle => ({
-                    ...particle,
-                    x: (particle.x + particle.speedX + window.innerWidth) % window.innerWidth,
-                    y: (particle.y + particle.speedY + window.innerHeight) % window.innerHeight,
-                }))
+                prevParticles.map(particle => {
+                    // Move particle to the right
+                    const newX = particle.x + particle.speed;
+
+                    // Reset particle position when it goes off screen
+                    if (newX > window.innerWidth + 50) {
+                        return {
+                            ...particle,
+                            x: -50,
+                            y: Math.random() * 200,
+                            speed: Math.random() * 2 + 1,
+                            opacity: 0,
+                        };
+                    }
+
+                    // Fade in particle as it moves
+                    const newOpacity = Math.min(0.8, (newX / window.innerWidth) * 0.8);
+
+                    return {
+                        ...particle,
+                        x: newX,
+                        opacity: newOpacity,
+                    };
+                })
             );
             requestAnimationFrame(animate);
         };
@@ -48,24 +74,25 @@ const AnimatedTitle = () => {
             {particles.map(particle => (
                 <motion.div
                     key={particle.id}
-                    className="absolute bg-white/20 rounded-full"
+                    className="absolute bg-white rounded-full"
                     style={{
                         width: particle.size,
                         height: particle.size,
                         x: particle.x,
                         y: particle.y,
+                        opacity: particle.opacity,
                     }}
                 />
             ))}
 
             {/* Title */}
             <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5 }}
                 className="text-4xl md:text-6xl font-bold text-center relative z-10 text-white"
             >
-                Welcome to CodeForces
+                CodeForces
             </motion.h1>
         </div>
     );
