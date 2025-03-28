@@ -1,0 +1,38 @@
+.matrix-bg {
+    background-color: #000000;
+    background-image: 
+      linear-gradient(rgba(0, 255, 0, 0.03) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(0, 255, 0, 0.03) 2px, transparent 2px);
+    background-size: 50px 50px;
+  }
+  
+  .glow {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+  
+  .contest-card {
+    backdrop-filter: blur(10px);
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-effect {
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .text-glow-yellow {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  }
+  
+  .text-glow-blue {
+    color: #00BFFF;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+  }
+  
+  .text-glow-red {
+    color: #FF4444;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.7);
+  }
