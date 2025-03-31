@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Search, Filter } from "lucide-react";
-import { Input } from "./input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
+import { motion } from "framer-motion"
+import { Search, Filter } from "lucide-react"
+import { Input } from "./input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select"
 
 interface ContestFiltersProps {
-  searchTerm: string;
-  setSearchTerm: (value: string) => void;
-  contestType: string;
-  setContestType: (value: string) => void;
-  ratedOnly: boolean;
-  setRatedOnly: (value: boolean) => void;
+  searchTerm: string
+  setSearchTerm: (value: string) => void
+  contestType: string
+  setContestType: (value: string) => void
+  ratedOnly: boolean
+  setRatedOnly: (value: boolean) => void
 }
 
 export function ContestFilters({
@@ -63,5 +63,6 @@ export function ContestFilters({
         </div>
       </div>
     </motion.div>
-  );
+  )
 }
+

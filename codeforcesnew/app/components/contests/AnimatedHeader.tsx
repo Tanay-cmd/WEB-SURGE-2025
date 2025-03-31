@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Cpu } from "lucide-react";
+import { motion } from "framer-motion"
+import { Cpu } from "lucide-react"
 
 const headerVariants = {
   hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0 },
-};
+}
 
 export function AnimatedHeader() {
   return (
@@ -28,7 +28,7 @@ export function AnimatedHeader() {
         }}
         transition={{
           duration: 2,
-          repeat: Infinity,
+          repeat: Number.POSITIVE_INFINITY,
           repeatType: "reverse",
         }}
         className="inline-block"
@@ -73,5 +73,6 @@ export function AnimatedHeader() {
         Challenge yourself against the best coders
       </motion.p>
     </motion.div>
-  );
+  )
 }
+

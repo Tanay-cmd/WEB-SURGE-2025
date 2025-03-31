@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+"use client"
+
+import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 export default function GlitchText({ text }) {
-  const [glitches, setGlitches] = useState([]);
+  const [glitches, setGlitches] = useState([])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,17 +18,17 @@ export default function GlitchText({ text }) {
           width: Math.random() * 20 + 10 + "px",
           height: Math.random() * 10 + 5 + "px",
           opacity: Math.random() * 0.8 + 0.2,
-        }
-      ]);
+        },
+      ])
 
       // Remove old glitches to prevent overflow
       setTimeout(() => {
-        setGlitches((prev) => prev.slice(1));
-      }, 300);
-    }, 150);
+        setGlitches((prev) => prev.slice(1))
+      }, 300)
+    }, 150)
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="relative text-6xl font-bold text-white">
@@ -51,5 +53,6 @@ export default function GlitchText({ text }) {
         />
       ))}
     </div>
-  );
+  )
 }
+

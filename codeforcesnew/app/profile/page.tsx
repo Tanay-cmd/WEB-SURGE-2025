@@ -15,7 +15,7 @@ import {
   Star,
   Trophy,
   Users,
-} from "lucide-react";
+} from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/card"
 import { Avatar, AvatarFallback, AvatarImage } from "../components/avatar"
@@ -178,12 +178,12 @@ export default function Profile() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+    <div className="min-h-screen bg-black bg-[linear-gradient(rgba(0,255,0,0.03)_2px,transparent_2px),linear-gradient(90deg,rgba(0,255,0,0.03)_2px,transparent_2px)] bg-[size:50px_50px] text-gray-300 pb-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto"
+        className="max-w-7xl mx-auto p-6"
       >
         {/* Header */}
         <div className="flex flex-col md:flex-row gap-6 mb-8">
@@ -254,7 +254,7 @@ export default function Profile() {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6"
             >
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardContent className="p-4 flex items-center gap-3">
                   <Trophy className="h-8 w-8 text-amber-500" />
                   <div>
@@ -264,7 +264,7 @@ export default function Profile() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardContent className="p-4 flex items-center gap-3">
                   <Code className="h-8 w-8 text-blue-500" />
                   <div>
@@ -274,7 +274,7 @@ export default function Profile() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardContent className="p-4 flex items-center gap-3">
                   <Award className="h-8 w-8 text-purple-500" />
                   <div>
@@ -284,7 +284,7 @@ export default function Profile() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardContent className="p-4 flex items-center gap-3">
                   <Calendar className="h-8 w-8 text-green-500" />
                   <div>
@@ -314,10 +314,10 @@ export default function Profile() {
                 transition={{ delay: 0.6, duration: 0.5 }}
                 className="md:col-span-2"
               >
-                <Card>
+                <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                   <CardHeader>
-                    <CardTitle>Rating History</CardTitle>
-                    <CardDescription>Your performance over time</CardDescription>
+                    <CardTitle className="text-white">Rating History</CardTitle>
+                    <CardDescription className="text-gray-400">Your performance over time</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="h-[300px]">
@@ -351,10 +351,10 @@ export default function Profile() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.5 }}
                 >
-                  <Card>
+                  <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                     <CardHeader>
-                      <CardTitle>Problem Tags</CardTitle>
-                      <CardDescription>Your strengths and weaknesses</CardDescription>
+                      <CardTitle className="text-white">Problem Tags</CardTitle>
+                      <CardDescription className="text-gray-400">Your strengths and weaknesses</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div>
@@ -401,9 +401,9 @@ export default function Profile() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8, duration: 0.5 }}
                 >
-                  <Card>
+                  <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                     <CardHeader>
-                      <CardTitle>Achievements</CardTitle>
+                      <CardTitle className="text-white">Achievements</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="flex flex-wrap gap-2">
@@ -433,22 +433,22 @@ export default function Profile() {
 
           <TabsContent value="contests">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardHeader>
-                  <CardTitle>Contest History</CardTitle>
-                  <CardDescription>Your performance in recent contests</CardDescription>
+                  <CardTitle className="text-white">Contest History</CardTitle>
+                  <CardDescription className="text-gray-400">Your performance in recent contests</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="overflow-x-auto">
-                    <table className="w-full">
+                    <table className="w-full text-gray-300">
                       <thead>
-                        <tr className="border-b">
-                          <th className="text-left py-3 px-4 font-medium">Contest</th>
-                          <th className="text-left py-3 px-4 font-medium">Rank</th>
-                          <th className="text-left py-3 px-4 font-medium">Old Rating</th>
-                          <th className="text-left py-3 px-4 font-medium">New Rating</th>
-                          <th className="text-left py-3 px-4 font-medium">Change</th>
-                          <th className="text-left py-3 px-4 font-medium">Date</th>
+                        <tr className="border-b border-white/10">
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Contest</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Rank</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Old Rating</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">New Rating</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Change</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Date</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -484,22 +484,22 @@ export default function Profile() {
 
           <TabsContent value="submissions">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardHeader>
-                  <CardTitle>Recent Submissions</CardTitle>
-                  <CardDescription>Your latest problem submissions</CardDescription>
+                  <CardTitle className="text-white">Recent Submissions</CardTitle>
+                  <CardDescription className="text-gray-400">Your latest problem submissions</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="overflow-x-auto">
-                    <table className="w-full">
+                    <table className="w-full text-gray-300">
                       <thead>
-                        <tr className="border-b">
-                          <th className="text-left py-3 px-4 font-medium">Problem</th>
-                          <th className="text-left py-3 px-4 font-medium">Verdict</th>
-                          <th className="text-left py-3 px-4 font-medium">Language</th>
-                          <th className="text-left py-3 px-4 font-medium">Time</th>
-                          <th className="text-left py-3 px-4 font-medium">Memory</th>
-                          <th className="text-left py-3 px-4 font-medium">Date</th>
+                        <tr className="border-b border-white/10">
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Problem</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Verdict</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Language</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Time</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Memory</th>
+                          <th className="text-left py-3 px-4 font-medium text-gray-200">Date</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -516,12 +516,13 @@ export default function Profile() {
                                 {submission.problem}
                               </td>
                               <td
-                                className={`py-3 px-4 ${submission.verdict === "Accepted"
-                                  ? "text-green-600"
-                                  : submission.verdict === "Wrong Answer"
-                                    ? "text-red-600"
-                                    : "text-orange-600"
-                                  }`}
+                                className={`py-3 px-4 ${
+                                  submission.verdict === "Accepted"
+                                    ? "text-green-600"
+                                    : submission.verdict === "Wrong Answer"
+                                      ? "text-red-600"
+                                      : "text-orange-600"
+                                }`}
                               >
                                 {submission.verdict}
                               </td>
@@ -542,10 +543,10 @@ export default function Profile() {
 
           <TabsContent value="friends">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <Card>
+              <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                 <CardHeader>
-                  <CardTitle>Friends</CardTitle>
-                  <CardDescription>Your Codeforces connections</CardDescription>
+                  <CardTitle className="text-white">Friends</CardTitle>
+                  <CardDescription className="text-gray-400">Your Codeforces connections</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -557,7 +558,7 @@ export default function Profile() {
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: index * 0.1, duration: 0.3 }}
                         >
-                          <Card>
+                          <Card className="bg-[rgba(18,18,18,0.8)] border border-white/10 text-gray-300">
                             <CardContent className="p-4">
                               <div className="flex items-center gap-3">
                                 <Avatar>

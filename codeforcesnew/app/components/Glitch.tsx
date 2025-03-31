@@ -1,9 +1,9 @@
-"use client";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+"use client"
+import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 const PixelGlitch = () => {
-  const [glitchBoxes, setGlitchBoxes] = useState([]);
+  const [glitchBoxes, setGlitchBoxes] = useState([])
 
   useEffect(() => {
     const generateGlitchBoxes = () => {
@@ -13,13 +13,13 @@ const PixelGlitch = () => {
         y: Math.random() * 100 - 50, // Random y shift
         width: Math.random() * 100 + 20, // Random width
         height: Math.random() * 20 + 10, // Random height
-      }));
-      setGlitchBoxes(boxes);
-    };
+      }))
+      setGlitchBoxes(boxes)
+    }
 
-    const interval = setInterval(generateGlitchBoxes, 500); // Change effect every 500ms
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(generateGlitchBoxes, 500) // Change effect every 500ms
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden">
@@ -39,14 +39,15 @@ const PixelGlitch = () => {
           }}
           transition={{
             duration: 0.2,
-            repeat: Infinity,
+            repeat: Number.POSITIVE_INFINITY,
             repeatType: "mirror",
             ease: "easeInOut",
           }}
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default PixelGlitch;
+export default PixelGlitch
+

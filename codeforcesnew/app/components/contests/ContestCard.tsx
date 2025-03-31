@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Clock, Calendar, User, Trophy } from "lucide-react";
+import { motion } from "framer-motion"
+import { Clock, Calendar, User, Trophy } from "lucide-react"
 
 interface ContestCardProps {
   contest: {
-    id: number;
-    name: string;
-    type: string;
-    date: string;
-    time: string;
-    duration: string;
-    writer: string;
-    rated: boolean;
-  };
-  index: number;
+    id: number
+    name: string
+    type: string
+    date: string
+    time: string
+    duration: string
+    writer: string
+    rated: boolean
+  }
+  index: number
 }
 
 export function ContestCard({ contest, index }: ContestCardProps) {
@@ -31,9 +31,7 @@ export function ContestCard({ contest, index }: ContestCardProps) {
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h3 className="text-xl font-semibold text-[hsl(142,72%,55%)]">
-            {contest.name}
-          </h3>
+          <h3 className="text-xl font-semibold text-[hsl(142,72%,55%)]">{contest.name}</h3>
           <div className="flex items-center gap-2 text-gray-400 mt-2">
             <User className="w-4 h-4 text-gray-400" />
             <span>{contest.writer}</span>
@@ -55,5 +53,6 @@ export function ContestCard({ contest, index }: ContestCardProps) {
         </div>
       </div>
     </motion.div>
-  );
+  )
 }
+
