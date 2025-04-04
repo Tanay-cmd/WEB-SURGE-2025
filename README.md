@@ -1,47 +1,30 @@
-# IIITV-ICD Website Redesign for WEB SURGE 2025
+# WEB-SURGE-2025
 
-We've created a modern, responsive, and visually appealing website for IIIT Vadodara's International Campus Diu as part of the WEB SURGE 2025 hackathon. This event, organized jointly by Vector The Design Club and Dcodr The Coding Club, challenged us to transform the educational institution's web presence.
+Welcome to the **WEB SURGE 2025** repository, an event conducted jointly by **Vector The Design Club** and **Dcodr The Coding Club**.
+Problem Statements will be uploaded on 24th March
 
-## Project Highlights
+## Getting Started
+Follow these steps to set up your repository and start working on your project:
 
-Our implementation includes:
+### 1. Install Git
+Ensure Git is installed on your system. Download it from [Git's official website](https://git-scm.com/downloads).
 
-### Stunning Interactive Components
-- **SVG Mask Effects**: The placement page features an innovative text reveal effect where "Searching" changes to blue on hover, creating a captivating visual experience that works on both desktop and mobile.
-- **Expandable Officer Cards**: Interactive staff profiles with smooth animations that expand to show detailed information, complete with contact links and responsive images.
-- **Theme Toggle**: Dark/light mode functionality with persistent preferences stored in localStorage.
-- **Announcement Section**: Redesigned with gradient backgrounds, hover effects, and visual hierarchy improvements.
+### 2. Fork the Repository
+Create your own copy of this repository by forking it. If you're unsure how, watch this [How do i fork this Repository](https://www.youtube.com/watch?v=-9ftoxZ2X9g).
 
-### Responsive Design
-- All pages are fully optimized for different screen sizes from mobile to desktop
-- Touch interactions for mobile users, including custom handling in the SVG mask effect
-- Appropriate text sizing, padding, and spacing for different viewport widths
-- Consistent navigation experience across all devices
+### 3. Clone Your Fork
+Clone your forked repository to your local machine using the command:
+```bash
+ git clone <your-forked-repository-URL>
+```
 
-### Modern UI Implementation
-- Clean, professional aesthetic aligned with the institute's branding and color scheme
-- Improved typography with proper hierarchy and readability
-- Smooth animations and transitions throughout the interface
-- Accessible design elements with proper contrast and focus states
+### 4. Develop Locally
+Write and test your code on your local machine. Make regular commits to track your progress.
 
-### Technical Achievements
-- Built with Next.js for optimal performance and SEO
-- Used Framer Motion for fluid, physics-based animations
-- Implemented React Context API for state management
-- Created custom hooks for reusable functionality
-- Optimized images and assets for faster loading
+### 5. Push Your Code
+Once your code is ready, push your changes to your forked repository (not this original repository). If you need help, watch this [How do i push the code?](https://www.youtube.com/watch?v=eLmpKKaQL54).
 
-### Pages Implemented
-1. **Home**: Featuring announcements, news, and events with modern styling
-2. **Officers**: Staff directory with interactive expandable cards
-3. **Placement**: Interactive text effects and information for prospective students
-4. **FAQ**: Comprehensive information organized in an accessible format
-5. **Hostel**: Details about campus accommodation with visual elements
+## Why Use Git/GitHub?
+Learning Git and GitHub will make your life as a developer easier. 🚀
 
-## About WEB SURGE 2025
-
-WEB SURGE is a hackathon that brings together design and coding enthusiasts to create innovative web solutions. The 2025 edition focused on educational institution websites, challenging participants to apply modern web development techniques and design principles to enhance user experience and visual appeal.
-
-This event exemplifies how collaboration between designers and developers can transform traditional educational websites into engaging, user-friendly platforms that better serve students, faculty, and visitors while showcasing the institution's strengths.
-
-Our implementation demonstrates technical proficiency, design sensibility, and attention to user experience—key attributes that make educational websites more effective in today's digital landscape.
+KeepBuilding!!
