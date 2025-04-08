@@ -38,6 +38,7 @@ const ratingData = [
   { date: "Oct", rating: 1800 },
 ]
 
+
 // Sample data for contests
 const contestsData = [
   {

@@ -3,8 +3,18 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 
-export default function GlitchText({ text }) {
-  const [glitches, setGlitches] = useState([])
+export default function GlitchText({ text }: { text: string }) {
+  type Glitch = {
+    id: number;
+    top: string;
+    left: string;
+    width: string;
+    height: string;
+    opacity: number;
+  };
+  
+  const [glitches, setGlitches] = useState<Glitch[]>([])
+  
 
   useEffect(() => {
     const interval = setInterval(() => {

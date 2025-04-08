@@ -3,7 +3,9 @@
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { useRef } from "react"
 
-function useParallax(value, distance) {
+import { MotionValue } from "framer-motion"
+
+function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance])
 }
 
@@ -46,7 +48,7 @@ const data = [
   },
 ]
 
-function Image({ id }) {
+function Image({ id }: { id: number }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
   const y = useParallax(scrollYProgress, 100)

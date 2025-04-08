@@ -3,7 +3,16 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 
 const PixelGlitch = () => {
-  const [glitchBoxes, setGlitchBoxes] = useState([])
+  type GlitchBox = {
+    id: number;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+  
+  const [glitchBoxes, setGlitchBoxes] = useState<GlitchBox[]>([])
+  
 
   useEffect(() => {
     const generateGlitchBoxes = () => {

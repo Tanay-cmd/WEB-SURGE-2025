@@ -2,7 +2,23 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { ChevronDown, HelpCircle, Book, FileText, Code, Award, Info, Mail, MessageSquare } from "lucide-react"
+import {
+  ChevronDown,
+  HelpCircle,
+  Book,
+  FileText,
+  Code,
+  Award,
+  Info,
+  Mail,
+  MessageSquare,
+} from "lucide-react";
+
+interface AccordionProps {
+  title: string;
+  children: React.ReactNode;
+  icon: React.ReactNode;
+}
 
 // FAQ data
 const faqData = [
@@ -112,8 +128,8 @@ const resourcesData = [
 ]
 
 // Accordion component
-const Accordion = ({ title, children, icon }) => {
-  const [isOpen, setIsOpen] = useState(false)
+const Accordion: React.FC<AccordionProps> = ({ title, children, icon }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.div
@@ -147,9 +163,15 @@ const Accordion = ({ title, children, icon }) => {
   )
 }
 
+interface FAQItemProps {
+  question: string;
+  answer: string;
+  index: number;
+}
+
 // FAQ Item component
-const FAQItem = ({ question, answer, index }) => {
-  const [isOpen, setIsOpen] = useState(false)
+const FAQItem: React.FC<FAQItemProps> = ({ question, answer, index }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.div
